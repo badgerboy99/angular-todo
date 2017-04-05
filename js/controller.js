@@ -67,9 +67,11 @@ angular.module('RouteControllers', [])
             console.log(results);
         }).catch(function(err) {
                 console.log(err);
+        });
+        }
         })
 
-        .controller('EditToDoController', function($scope, $location, $routeParams, TodoAPIService, store) {
+        .controller('EditToDoController', function($scope, $location, $routeParams, ToDoAPIService, store) {
         var id = $routeParams.id;
         var URL = "https://morning-castle-91468.herokuapp.com/";
 
@@ -91,6 +93,5 @@ angular.module('RouteControllers', [])
             }
         }
     });
-    };
-    });
+   
     
